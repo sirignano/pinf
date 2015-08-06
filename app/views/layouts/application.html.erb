@@ -27,7 +27,7 @@
 
                     <li>
 						<% if user_signed_in? %>
-						<a href="/?ref=2">Logged in as <strong><%= current_user.email %></strong>.</a>
+						<a href="/">Logged in as <strong><%= current_user.email %></strong>.</a>
 						<% end %>
                     </li>
                     <li>
@@ -44,15 +44,6 @@
 						<% else %>
 						  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 						<% end %>
-                    </li>
-                    <li>
-                        <a href="/?ref=0">Modèle A</a>
-                    </li>
-                    <li>
-                        <a href="/?ref=1">Modèle B</a>
-                    </li>
-                    <li>
-                        <a href="/?ref=2">Modèle C</a>
                     </li>
                 </ul>
             </div>
@@ -71,10 +62,7 @@
 <div class="fix row logo">
 </div>
 
-<div class="box">
-
     <%= yield %>
-</div>
 
 </body>
 </html>

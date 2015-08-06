@@ -1,2 +1,31 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="container">
+<h2></h2>
+  <ul>
+	<li><a href="http://github.com/<%= current_user.github %>/" target="_sjkhf">CLICK ICI </a></li>
+	<li><%= current_user.phone %></li>
+	<li><%= current_user.login %></li>
+	<li><%= current_user.id %></li>
+  </ul>
+</div>
+
+<div class="container">
+<h2>owned project</h2>
+ 	<% @owned_project.each do |owned| %>
+ 		<%= owned.id %>
+ 		<%= owned.title %>
+ 		<%= owned.description %>
+ 		<%= owned.picture %>
+ 		<%= owned.start_date %>
+ 	<% end %>
+</div>
+
+<div class="container">
+<h2>other project</h2>
+ 	<% @all_project.each do |owned| %>
+ 		<%= owned.id %>
+ 		<%= owned.title %>
+ 		<%= owned.description %>
+ 		<%= owned.picture %>
+ 		<%= owned.start_date %>
+ 	<% end %>
+</div>
